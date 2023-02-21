@@ -1,0 +1,91 @@
+/* Cabeçalho */
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 33px;
+}
+
+/* Categorias */
+.categorias__lista {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.destaques {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.destaques__barra {
+    flex-grow: 1;
+}
+
+.eventos__lista,
+.agenda__lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.eventos__item,
+.agenda__item {
+    flex-grow: 1;
+    max-width: 400px;
+}
+
+.rodape {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.rodape__logo {
+    align-self: flex-end;
+}
+
+@media (min-width: 720px) {
+    
+    .menu {
+        column-gap: 75px;
+    }
+
+    .categorias__lista {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .eventos__lista,
+    .agenda__lista {
+        justify-content: end;
+    }
+
+    .rodape__logo {
+        display: flex;
+        flex-direction: column;
+        justify-self: end;
+        align-self: flex-end;
+    }
+
+}
+
+@media (min-width: 1440px) {
+    .menu {
+        column-gap: 105px;
+        flex-wrap: nowrap;
+    }
+    
+    .menu__item:nth-child(1) {
+        order: -2;
+    }
+    
+    .menu__pesquisar {
+        order: -1;
+    }
+}
+
